@@ -1,0 +1,28 @@
+
+.historyBotch {
+    color: red;
+    font-weight: bold;
+}
+.historyMiss {
+    color: gray;
+    font-weight: lighter;
+}
+.historyCancel {
+    background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);
+}
+.historySuccess {
+    font-weight: bold;
+}
+
+.historyGrid {
+    display: grid;
+    grid-template-columns: 1fr min-content min-content max-content min-content 1fr;
+    grid-template-rows: auto;
+    grid-gap: 0.5em;
+    align-items: center;
+    padding: 0.5em;
+}
+
+.historyTypeLabel {
+    grid-column: 2 / span 2;
+}

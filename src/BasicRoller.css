@@ -1,0 +1,73 @@
+
+.rollGrid1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5% 10% 5% 10% 70%;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border: 1px solid gray;
+    height: 90svh;
+}
+
+.rollGrid1 button {
+    padding: 0;
+}
+
+.rollGrid1 > div {
+    border: 1px solid gray;
+}
+
+
+.dice-header1 {
+    grid-area: 1 / 1 / 2 / 4;
+    display: flex;
+}
+
+.dice-header1 span {
+    flex: 1;
+    text-align: center;
+    align-self: end;
+}
+
+.dice-less1 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.dice-value1 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.dice-more1 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.diff-header1 {
+    grid-area: 3 / 1 / 4 / 4;
+    display: flex;
+}
+
+.diff-header1 span {
+    flex: 1;
+    text-align: center;
+    align-self: end;
+}
+
+.diff-less1 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.diff-value1 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.diff-more1 {
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+.score1 {
+    grid-area: 5 / 1 / 6 / 4;
+}
+
+div.disabled svg text {
+    fill: #444;
+}

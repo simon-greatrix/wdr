@@ -1,0 +1,63 @@
+
+.statGrid3 {
+    display: grid;
+    grid-template-columns: 1fr min-content min-content 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.statGrid3 > div {
+    padding: 0.5rem;
+}
+
+.statGrid10 {
+    display: grid;
+    grid-template-columns: 1fr min-content min-content 1fr;
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.statGrid10 > div {
+    padding: 0.5rem;
+}
+
+.statGridLeft {
+    grid-column: 2;
+    justify-self: start;
+    align-self: center;
+}
+
+.statGridRight {
+    grid-column: 3;
+    justify-self: end;
+    align-self: center;
+}
+
+.statGridRow1 {
+    grid-row: 1;
+}
+.statGridRow2 {
+    grid-row: 2;
+}
+.statGridRow3 {
+    grid-row: 3;
+}
+.statGridRow4 {
+    grid-row: 4;
+}
+.statGridRow5 {
+    grid-row: 5;
+}
+.statGridRow6 {
+    grid-row: 6;
+}
+.statGridRow7 {
+    grid-row: 7;
+}
+.statGridRow8 {
+    grid-row: 8;
+}
+.statGridRow9 {
+    grid-row: 9;
+}
+.statGridRow10 {
+    grid-row: 10;
+}

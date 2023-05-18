@@ -1,0 +1,15 @@
+.faveBox {
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+.faveTitle {
+    font-weight: bold;
+    font-size: 1.2em;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0.5em;
+}
+.faveDesc {
+
+}
