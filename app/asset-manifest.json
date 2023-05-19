@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/wdr/app/static/css/main.994ad051.css",
-    "main.js": "/wdr/app/static/js/main.3df12963.js",
+    "main.css": "/wdr/app/static/css/main.6189e3fd.css",
+    "main.js": "/wdr/app/static/js/main.0dd9a82b.js",
     "static/js/787.3fd2b4e4.chunk.js": "/wdr/app/static/js/787.3fd2b4e4.chunk.js",
     "service-worker.js": "/wdr/app/service-worker.js",
     "static/media/go-dice-roll.mp3": "/wdr/app/static/media/go-dice-roll.f8772b656489fe4ff7ce.mp3",
@@ -9,12 +9,12 @@
     "static/media/dice-roll.mp3": "/wdr/app/static/media/dice-roll.cf8ecd99c38cf2b7117b.mp3",
     "static/media/d10.svg": "/wdr/app/static/media/d10.d9d0add1a75f7a427c6a14942acc92b5.svg",
     "index.html": "/wdr/app/index.html",
-    "main.994ad051.css.map": "/wdr/app/static/css/main.994ad051.css.map",
-    "main.3df12963.js.map": "/wdr/app/static/js/main.3df12963.js.map",
+    "main.6189e3fd.css.map": "/wdr/app/static/css/main.6189e3fd.css.map",
+    "main.0dd9a82b.js.map": "/wdr/app/static/js/main.0dd9a82b.js.map",
     "787.3fd2b4e4.chunk.js.map": "/wdr/app/static/js/787.3fd2b4e4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.994ad051.css",
-    "static/js/main.3df12963.js"
+    "static/css/main.6189e3fd.css",
+    "static/js/main.0dd9a82b.js"
   ]
 }
