@@ -1,4 +1,4 @@
-import {assertIsArray, assertIsNumber, assertIsObject, assertIsString, ListOfAbilities, ListOfAttributes} from "./Constants";
+import {assertIsArray, assertIsNumber, assertIsObject, assertIsString, ListOfAbilities, ListOfAttributes, ListOfBonuses} from "./Constants";
 import {useState} from "react";
 
 interface DataBlock<T> {
@@ -70,11 +70,22 @@ export class Favourite {
     return new Favourite(input.name, input.attribute, input.ability, input.difficulty);
   }
 
-  constructor(name: string, attribute: string, ability: string, difficulty: number) {
+  constructor(name: string, attribute: string, ability: string, difficulty: number, check ?: boolean) {
     this.name = name;
     this.attribute = attribute;
     this.ability = ability;
     this.difficulty = difficulty;
+    if (check) {
+      if (!(ListOfAbilities.includes(ability) || ListOfBonuses.includes(ability))) {
+        throw new Error("Invalid ability:" + ability);
+      }
+      if (!ListOfAttributes.includes(attribute)) {
+        throw new Error("Invalid attribute:" + attribute);
+      }
+      if (difficulty < 2 || difficulty > 10 || difficulty !== Math.floor(difficulty)) {
+        throw new Error("Invalid difficulty:" + difficulty);
+      }
+    }
   }
 
   clone(): Favourite {
@@ -87,40 +98,48 @@ export class Favourite {
     }
     return this.id;
   }
+  
+  setId(others : Favourite[]) {
+    let newId: string;
+    let tester = (s: string) => others.some((f) => f.id === s);
+    do {
+      newId = Math.random().toString(36).substring(2, 9);
+    } while (tester(newId));
+    this.id = newId;
+  }
 }
 
 const INITIAL_FAVOURITES = [
-  new Favourite("Bite Attack", "Dexterity", "Brawl", 5),
-  new Favourite("Bite Damage", "Strength", "+1 dice", 6),
-  new Favourite("Claw Attack", "Dexterity", "Brawl", 6),
-  new Favourite("Claw Damage", "Strength", "+2 dice", 6),
-  new Favourite("Kick Attack", "Dexterity", "Brawl", 7),
-  new Favourite("Kick Damage", "Strength", "+1 dice", 6),
-  new Favourite("Punch Attack", "Dexterity", "Brawl", 6),
-  new Favourite("Punch Damage", "Strength", "No bonus", 6),
-  new Favourite("Dodge", "Dexterity", "Dodge", 6),
-  new Favourite("Shoot", "Dexterity", "Firearm", 6),
+  new Favourite("Bite Attack", "Dexterity", "Brawl", 5, true),
+  new Favourite("Bite Damage", "Strength", "+1 dice", 6, true),
+  new Favourite("Claw Attack", "Dexterity", "Brawl", 6, true),
+  new Favourite("Claw Damage", "Strength", "+2 dice", 6, true),
+  new Favourite("Kick Attack", "Dexterity", "Brawl", 7, true),
+  new Favourite("Kick Damage", "Strength", "+1 dice", 6, true),
+  new Favourite("Punch Attack", "Dexterity", "Brawl", 6, true),
+  new Favourite("Punch Damage", "Strength", "No bonus", 6, true),
+  new Favourite("Dodge", "Dexterity", "Dodge", 6, true),
+  new Favourite("Shoot", "Dexterity", "Firearms", 6, true),
 
-  new Favourite("Look for clues", "Intelligence", "Investigation", 7),
-  new Favourite("Searching", "Perception", "Investigation", 7),
-  new Favourite("Sneaking", "Dexterity", "Stealth", 6),
+  new Favourite("Look for clues", "Intelligence", "Investigation", 7, true),
+  new Favourite("Searching", "Perception", "Investigation", 7, true),
+  new Favourite("Sneaking", "Dexterity", "Stealth", 6, true),
 
-  new Favourite("Gift: Persuasion", "Charisma", "Subterfuge", 6),
-  new Favourite("Gift: Sense Wyrm", "Perception", "Occult", 6),
-  new Favourite("Gift: Heightened Senses", "Perception", "Primal-Urge", 6),
-  new Favourite("Gift: Leaping", "Stamina", "Athletics", 7),
-  new Favourite("Gift: Blur of the Milky Eye", "Manipulation", "Stealth", 8),
-  new Favourite("Gift: Mother's Touch", "Intelligence", "Medicine", 6),
-  new Favourite("Gift: Scent of the True Form", "Perception", "Primal-Urge", 8),
-  new Favourite("Gift: Truth of Gaia", "Intelligence", "Empathy", 6),
-  new Favourite("Gift: Beast Speech", "Charisma", "Animal Ken", 6),
-  new Favourite("Gift: Call of the Wyld", "Stamina", "Empathy", 6),
-  new Favourite("Gift: Mindspeak", "Manipulation", "Expression", 6),
-  new Favourite("Gift: The Falling Touch", "Dexterity", "Medicine", 6),
-  new Favourite("Gift: Cooking", "Wits", "Survival", 6),
-  new Favourite("Gift: Scent of Sweet Honey", "Wits", "Subterfuge", 6),
-  new Favourite("Gift: Control Simple Machine", "Manipulation", "Repair", 7),
-
+  new Favourite("Gift: Persuasion", "Charisma", "Subterfuge", 6, true),
+  new Favourite("Gift: Sense Wyrm", "Perception", "Occult", 6, true),
+  new Favourite("Gift: Heightened Senses", "Perception", "Primal-Urge", 6, true),
+  new Favourite("Gift: Leaping", "Stamina", "Athletics", 7, true),
+  new Favourite("Gift: Blur of the Milky Eye", "Manipulation", "Stealth", 8, true),
+  new Favourite("Gift: Mother's Touch", "Intelligence", "Medicine", 6, true),
+  new Favourite("Gift: Scent of the True Form", "Perception", "Primal-Urge", 8, true),
+  new Favourite("Gift: Truth of Gaia", "Intelligence", "Empathy", 6, true),
+  new Favourite("Gift: Beast Speech", "Charisma", "Animal Ken", 6, true),
+  new Favourite("Gift: Call of the Wyld", "Stamina", "Empathy", 6, true),
+  new Favourite("Gift: Mindspeak", "Manipulation", "Expression", 6, true),
+  new Favourite("Gift: The Falling Touch", "Dexterity", "Medicine", 6, true),
+  new Favourite("Gift: Cooking", "Wits", "Survival", 6, true),
+  new Favourite("Gift: Scent of Sweet Honey", "Wits", "Subterfuge", 6, true),
+  new Favourite("Gift: Control Simple Machine", "Manipulation", "Repair", 7, true)
 ];
 
 export class AppState {

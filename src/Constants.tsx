@@ -54,6 +54,15 @@ const ListOfAbilities = [
   "Science"
 ];
 
+const ListOfBonuses = [
+  "No bonus",
+  "+1 dice",
+  "+2 dice",
+  "+3 dice",
+  "+4 dice",
+  "+5 dice"
+];
+
 function assertIsNumber(value: any): asserts value is number {
   if (typeof value !== 'number') {
     throw new TypeError('Not a number, but ' + typeof value);
@@ -84,4 +93,4 @@ function assertIsObject(value: any): asserts value is object {
   }
 }
 
-export {ListOfAbilities, ListOfAttributes, assertIsNumber, assertIsString, assertIsBoolean, assertIsArray, assertIsObject};
+export {ListOfAbilities, ListOfAttributes, ListOfBonuses, assertIsNumber, assertIsString, assertIsBoolean, assertIsArray, assertIsObject};

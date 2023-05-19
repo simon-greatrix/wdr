@@ -8,6 +8,10 @@
     text-align: center;
 }
 
+.fullWidth {
+    width: 100%;
+}
+
 .menu {
     height: 10svh;
 }

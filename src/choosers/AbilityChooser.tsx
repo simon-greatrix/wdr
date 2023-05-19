@@ -11,7 +11,7 @@ interface AbilityChooserProps {
 
 export default function AbilityChooser(props: AbilityChooserProps) {
   return (
-      <Select className={props.className} label={"Ability"} value={props.value} onChange={props.onChange}>
+      <Select className={props.className} value={props.value} onChange={props.onChange}>
         <ListSubheader>Talents</ListSubheader>
         <MenuItem value={"Alertness"}>Alertness</MenuItem>
         <MenuItem value={"Athletics"}>Athletics</MenuItem>

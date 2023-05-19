@@ -1,15 +1,104 @@
+
 .faveBox {
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
+    border: 1px solid white;
+    border-radius: 4px;
     padding: 0.5rem;
-    margin: 1rem 0;
+    width: 100%;
+    margin-bottom: 0.5em;
+    background-color: black;
+    display: flex;
 }
+
+.faveInner {
+    flex-grow: 1;
+}
+
 .faveTitle {
     font-weight: bold;
     font-size: 1.2em;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid white;
     margin-bottom: 0.5em;
 }
-.faveDesc {
 
+.faveContainer {
+    padding: 0.5em;
+}
+
+.faveDrag {
+    flex-grow: 0;
+    align-content: center;
+}
+
+.faveText {
+    width: 100%;
+}
+
+.faveDropArea {
+    margin-top: 2em;
+    width: 100%;
+    height: 7.5rem;
+    border: solid 1px white;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg, #000000 25%, #444400 25%, #444400 50%, #000000 50%, #000000 75%, #444400 75%, #444400 100%);
+    background-size: 57px 57px;
+}
+
+.fcDialog {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: repeat(5, min-content);
+    grid-gap: 0.5em;
+    width: 75svw;
+}
+
+.fcName {
+    grid-area: 1 / 1 / 2 / 3;
+    font-weight: bold;
+}
+
+.fcText {
+    grid-area: 2 / 1 / 3 / 3;
+    width: 100%;
+}
+
+.fcText div {
+    width: 100%
+}
+
+.fcLabel1 {
+    display: grid;
+    grid-area: 3 / 1 / 4 / 2;
+    align-content: center;
+}
+
+.fcValue1 {
+    grid-area: 3 /2 / 4 / 3;
+}
+
+.fcLabel2 {
+    display: grid;
+    grid-area: 4 / 1 / 5 / 2;
+    align-content: center;
+}
+
+.fcValue2 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.fcLabel3 {
+    display: grid;
+    grid-area: 5 / 1 / 6 / 2;
+    align-content: center;
+}
+
+.fcValue3 {
+    grid-area: 5 / 2 / 6 / 3;
+}
+
+.fcDiff {
+    text-align: right;
+    width: 100%;
 }

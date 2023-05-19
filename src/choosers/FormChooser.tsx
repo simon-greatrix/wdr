@@ -10,7 +10,7 @@ interface FormChooserProps {
 
 export default function FormChooser(props: FormChooserProps) {
   return (
-      <Select className={props.className} label="Form" value={props.value} onChange={props.onChange}>
+      <Select className={props.className} value={props.value} onChange={props.onChange}>
         <MenuItem value={"Homid"}>Homid</MenuItem>
         <MenuItem value={"Glabro"}>Glabro</MenuItem>
         <MenuItem value={"Crinos"}>Crinos</MenuItem>

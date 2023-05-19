@@ -11,7 +11,7 @@ interface AttributeChooserProps {
 
 export default function AttributeChooser(props: AttributeChooserProps) {
   return (
-      <Select className={props.className} label="Attribute" value={props.value} onChange={props.onChange}>
+      <Select className={props.className} value={props.value} onChange={props.onChange}>
         <ListSubheader>Physical</ListSubheader>
         <MenuItem value={"Strength"}>Strength</MenuItem>
         <MenuItem value={"Dexterity"}>Dexterity</MenuItem>
