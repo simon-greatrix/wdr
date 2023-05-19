@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/wdr/app/static/css/main.aabf8b90.css",
+    "main.js": "/wdr/app/static/js/main.2d126aa4.js",
+    "static/js/787.3fd2b4e4.chunk.js": "/wdr/app/static/js/787.3fd2b4e4.chunk.js",
+    "service-worker.js": "/wdr/app/service-worker.js",
+    "static/media/go-dice-roll.mp3": "/wdr/app/static/media/go-dice-roll.f8772b656489fe4ff7ce.mp3",
+    "static/media/lets-roll.mp3": "/wdr/app/static/media/lets-roll.4459aa246daf664fb689.mp3",
+    "static/media/dice-roll.mp3": "/wdr/app/static/media/dice-roll.cf8ecd99c38cf2b7117b.mp3",
+    "static/media/d10.svg": "/wdr/app/static/media/d10.d9d0add1a75f7a427c6a14942acc92b5.svg",
+    "index.html": "/wdr/app/index.html",
+    "main.aabf8b90.css.map": "/wdr/app/static/css/main.aabf8b90.css.map",
+    "main.2d126aa4.js.map": "/wdr/app/static/js/main.2d126aa4.js.map",
+    "787.3fd2b4e4.chunk.js.map": "/wdr/app/static/js/787.3fd2b4e4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aabf8b90.css",
+    "static/js/main.2d126aa4.js"
+  ]
+}
